@@ -32,6 +32,7 @@ public class TicTacToeGame {
     public void play(int position){
         if(strategy == PlayStrategy.VsHuman){
             humanPlayer(position);
+            setWinner();
         }else if (strategy == PlayStrategy.VsComputer){
             //computer player
         }
@@ -111,7 +112,7 @@ public class TicTacToeGame {
         var r1 = String.format(("%s %s %s \n"), board[0], board[1], board[2]);
         var r2 = String.format(("%s %s %s \n"), board[3], board[4], board[5]);
         var r3 = String.format(("%s %s %s \n"), board[6], board[7], board[8]);
-        var r4 = String.format( " Winner: %s (moves: %d) \n", winner, moves);
+        var r4 = String.format( "Winner: %s (moves: %d) \n", winner, moves);
         return r1 + r2 + r3 + r4;   
     }
 }
