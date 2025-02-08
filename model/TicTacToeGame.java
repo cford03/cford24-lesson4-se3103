@@ -106,6 +106,13 @@ public class TicTacToeGame {
             return null;
         }
     }
+    public GameState getState(){
+        return state;
+    }
+
+    public void setState(GameState state){
+        this.state = state;
+    }
 
     @Override
     public String toString(){
